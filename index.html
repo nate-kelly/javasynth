@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaSynth</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap" rel="stylesheet">
+  <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <h1 data-text="JavaSynth">JavaSynth</h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrapper">
+        <form action="#">
+          <div class="form-item">
+            <label for="sounds" class="label">Choose your sound:</label>
+            <select name="sounds" id="sounds">
+              <option value="Synth">Synth</option>
+              <option value="Piano">Piano</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <button class="overlay">Show Keyboard Overlay</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div class="synth">
+          <button data-note="C" class="key white">
+            <p class="letter">A</p>
+          </button>
+          <button data-note="Db" class="key black">
+            <p class="letter">W</p>
+          </button>
+          <button data-note="D" class="key white">
+            <p class="letter">S</p>
+          </button>
+          <button data-note="Eb" class="key black">
+            <p class="letter">E</p>
+          </button>
+          <button data-note="E" class="key white">
+            <p class="letter">D</p>
+          </button>
+          <button data-note="F" class="key white">
+            <p class="letter">F</p>
+          </button>
+          <button data-note="Gb" class="key black">
+            <p class="letter">T</p>
+          </button>
+          <button data-note="G" class="key white">
+            <p class="letter">G</p>
+          </button>
+          <button data-note="Ab" class="key black">
+            <p class="letter">Y</p>
+          </button>
+          <button data-note="A" class="key white">
+            <p class="letter">H</p>
+          </button>
+          <button data-note="Bb" class="key black">
+            <p class="letter">U</p>
+          </button>
+          <button data-note="B" class="key white">
+            <p class="letter">J</p>
+          </button>
+          <button data-note="C2" class="key white">
+            <p class="letter">K</p>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <p>Created by <a href="https://natemakes.dev">Nathan Kelly</a></p>
+    </div>
+  </footer>
+
+  <audio id="C" class="audio" preload="auto">
+    <source src="/assets/notes/C.wav" type="audio/wav">
+  </audio>
+  <audio id="Db" class="audio" preload="auto">
+    <source src="/assets/notes/Db.wav" type="audio/wav">
+  </audio>
+  <audio id="D" class="audio" preload="auto">
+    <source src="/assets/notes/D.wav" type="audio/wav">
+  </audio>
+  <audio id="Eb" class="audio" preload="auto">
+    <source src="/assets/notes/Eb.wav" type="audio/wav">
+  </audio>
+  <audio id="E" class="audio" preload="auto">
+    <source src="/assets/notes/E.wav" type="audio/wav">
+  </audio>
+  <audio id="F" class="audio" preload="auto">
+    <source src="/assets/notes/F.wav" type="audio/wav">
+  </audio>
+  <audio id="Gb" class="audio" preload="auto">
+    <source src="/assets/notes/Gb.wav" type="audio/wav">
+  </audio>
+  <audio id="G" class="audio" preload="auto">
+    <source src="./assets/notes/G.wav" type="audio/wav">
+  </audio>
+  <audio id="Ab" class="audio" preload="auto">
+    <source src="/assets/notes/Ab.wav" type="audio/wav">
+  </audio>
+  <audio id="A" class="audio" preload="auto">
+    <source src="/assets/notes/A.wav" type="audio/wav">
+  </audio>
+  <audio id="Bb" class="audio" preload="auto">
+    <source src="/assets/notes/Bb.wav" type="audio/wav">
+  </audio>
+  <audio id="B" class="audio" preload="auto">
+    <source src="/assets/notes/B.wav" type="audio/wav">
+  </audio>
+  <audio id="C2" class="audio" preload="auto">
+    <source src="/assets/notes/C2.wav" type="audio/wav">
+  </audio>
+
+</body>
+
+</html>
