@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-item {
+  margin: 0 0 4rem;
+}
+
+label {
+  margin-right: 2rem;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.overlay {
+  padding: 1rem 4rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: $blue;
+  cursor: pointer;
+}
+
+.letter {
+  display: none;
+  font-size: 2vw;
+  margin: 1vw 0;
+}
+
+.show {
+  display: block;
+}

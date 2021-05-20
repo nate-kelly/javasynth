@@ -1,0 +1,11 @@
+@media (max-width: 80rem) {
+  h1 {
+    font-size: calc(5rem + 1vw);
+  }
+}
+
+@media (max-width: 40rem) {
+  h1 {
+    font-size: calc(3rem + 1vw);
+  }
+}
