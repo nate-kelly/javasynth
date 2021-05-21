@@ -3,6 +3,11 @@ import { keys, whiteKeys, blackKeys, whiteKeyboard, blackKeyboard, dropdown, but
 import playNote from './playnote.js';
 import changeSound from './changesound.js';
 
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loader-container');
+  loader.remove();
+});
+
 keys.forEach(key => key.addEventListener('click', () => playNote(key)));
 dropdown.addEventListener('change', e => changeSound(lead, bass, pad, chaos, e.target.value));
 button.addEventListener('click', e => showKeys(e));
