@@ -70,6 +70,11 @@ const chaos = [
   { note: 'C2', path: './assets/chaos/C.wav' }
 ];
 
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loader-container');
+  loader.remove();
+});
+
 keys.forEach(key => key.addEventListener('click', () => playNote(key)));
 dropdown.addEventListener('change', e => changeSound(lead, bass, pad, chaos, e.target.value));
 button.addEventListener('click', e => showKeys(e));
