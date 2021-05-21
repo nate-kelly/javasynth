@@ -5,10 +5,11 @@
 
 .key {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   border: 0.2vw solid $pink;
-  border-radius: 0 0 0.7rem 0.7rem;
+  border-radius: 0 0 0.6vw 0.6vw;
 
   &.white {
     width: 6vw;

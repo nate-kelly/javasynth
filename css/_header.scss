@@ -1,10 +1,11 @@
 header {
-  padding: 1%;
+  padding: 4vh;
 }
 
 h1 {
   font-size: calc(8rem + 1vw);
   font-family: "Audiowide", cursive;
+  margin: 0;
   position: relative;
 
   &::before,

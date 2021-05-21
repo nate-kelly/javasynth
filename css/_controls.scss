@@ -5,29 +5,83 @@ form {
   align-items: center;
 }
 
-.form-item {
-  margin: 0 0 4rem;
-}
-
 label {
-  margin-right: 2rem;
+  margin: 0 0 2rem;
 }
 
 select {
-  padding: 0.5rem 1rem;
-  border: 0;
+  padding: 1rem 12rem 1rem 3rem;
+  border: 0.2rem solid $pink;
   border-radius: 0.5rem;
+  background: $offwhite;
+  color: $nearblack;
+  font-family: inherit;
+}
+
+.custom-select {
+  position: relative;
+  margin: 0 0 4rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: -0.1rem;
+  display: block;
+  background: $nearblack;
+  border: 0.2rem solid $pink;
+  border-radius: 0 0.5rem 0.5rem 0;
+  height: 100%;
+  width: 4rem;
+  pointer-events: none;
+
+  &::before,
+  &::after {
+    --size: 0.6rem;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid $pink;
+    top: 40%;
+  }
+
+  &::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid $pink;
+    top: 60%;
+  }
 }
 
 .overlay {
-  padding: 1rem 4rem;
-  border: 0;
+  margin: 4rem 0 0;
+  padding: 1.5rem 4rem;
+  border: 0.2rem solid $pink;
   border-radius: 0.5rem;
-  background: $blue;
+  background: $nearblack;
+  color: $offwhite;
+  font-family: inherit;
   cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+    color: $nearblack;
+  }
 }
 
 .letter {
+  font-family: "Space Grotesk";
   display: none;
   font-size: 2vw;
   margin: 1vw 0;

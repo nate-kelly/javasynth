@@ -262,12 +262,13 @@ html {
 }
 
 header {
-  padding: 1%;
+  padding: 4vh;
 }
 
 h1 {
   font-size: calc(8rem + 1vw);
   font-family: "Audiowide", cursive;
+  margin: 0;
   position: relative;
 }
 
@@ -650,29 +651,82 @@ form {
           align-items: center;
 }
 
-.form-item {
-  margin: 0 0 4rem;
-}
-
 label {
-  margin-right: 2rem;
+  margin: 0 0 2rem;
 }
 
 select {
-  padding: 0.5rem 1rem;
-  border: 0;
+  padding: 1rem 12rem 1rem 3rem;
+  border: 0.2rem solid #ff1493;
   border-radius: 0.5rem;
+  background: #eee;
+  color: #222;
+  font-family: inherit;
+}
+
+.custom-select {
+  position: relative;
+  margin: 0 0 4rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: -0.1rem;
+  display: block;
+  background: #222;
+  border: 0.2rem solid #ff1493;
+  border-radius: 0 0.5rem 0.5rem 0;
+  height: 100%;
+  width: 4rem;
+  pointer-events: none;
+}
+
+.arrow::before, .arrow::after {
+  --size: 0.6rem;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.arrow::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid #ff1493;
+  top: 40%;
+}
+
+.arrow::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid #ff1493;
+  top: 60%;
 }
 
 .overlay {
-  padding: 1rem 4rem;
-  border: 0;
+  margin: 4rem 0 0;
+  padding: 1.5rem 4rem;
+  border: 0.2rem solid #ff1493;
   border-radius: 0.5rem;
-  background: #75f4f4;
+  background: #222;
+  color: #eee;
+  font-family: inherit;
   cursor: pointer;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.overlay:hover, .overlay:focus {
+  background-color: #75f4f4;
+  color: #222;
 }
 
 .letter {
+  font-family: "Space Grotesk";
   display: none;
   font-size: 2vw;
   margin: 1vw 0;
@@ -695,14 +749,18 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 0.2vw solid #ff1493;
-  border-radius: 0 0 0.7rem 0.7rem;
+  border-radius: 0 0 0.6vw 0.6vw;
 }
 
 .key.white {
@@ -745,8 +803,9 @@ body {
   background-repeat: no-repeat;
   background-position: cover;
   color: #eee;
-  font-family: "Roboto", sans-serif;
-  font-size: calc(1rem + 0.7vw);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: calc(1.2rem + 1vw);
   text-align: center;
 }
 
@@ -757,7 +816,7 @@ body {
 }
 
 section {
-  padding: 1%;
+  padding: 2%;
 }
 
 a {

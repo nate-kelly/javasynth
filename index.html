@@ -9,9 +9,9 @@
   <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet">
   <script src="./js/main.js" type="module"></script>
-  <script nomodule src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -25,15 +25,15 @@
     <section>
       <div class="wrapper">
         <form action="#">
-          <div class="form-item">
-            <label for="sounds" class="label">Choose your sound:</label>
+          <label for="sounds" class="label">Choose your sound:</label>
+          <div class="custom-select">
             <select name="sounds" id="sounds">
-              <option value="Synth">Synth</option>
-              <option value="Piano">Piano</option>
+              <option value="lead">80s Lead</option>
+              <option value="bass">Thick Bass</option>
+              <option value="pad">Wavy Pad</option>
+              <option value="chaos">Total Chaos</option>
             </select>
-          </div>
-          <div class="form-item">
-            <button class="overlay">Show Keyboard Overlay</button>
+            <span class="arrow"></span>
           </div>
         </form>
       </div>
@@ -81,6 +81,7 @@
           <p class="letter">K</p>
         </button>
       </div>
+      <button class="overlay">Show Keyboard Overlay</button>
     </section>
   </main>
 
@@ -90,19 +91,19 @@
     </div>
   </footer>
 
-  <audio id="C" class="audio" src="./assets/notes/C.wav"></audio>
-  <audio id="Db" class="audio" src="./assets/notes/Db.wav"></audio>
-  <audio id="D" class="audio" src="./assets/notes/D.wav"></audio>
-  <audio id="Eb" class="audio" src="./assets/notes/Eb.wav"></audio>
-  <audio id="E" class="audio" src="./assets/notes/E.wav"></audio>
-  <audio id="F" class="audio" src="./assets/notes/F.wav"></audio>
-  <audio id="Gb" class="audio" src="./assets/notes/Gb.wav"></audio>
-  <audio id="G" class="audio" src="./assets/notes/G.wav"></audio>
-  <audio id="Ab" class="audio" src="./assets/notes/Ab.wav"></audio>
-  <audio id="A" class="audio" src="./assets/notes/A.wav"></audio>
-  <audio id="Bb" class="audio" src="./assets/notes/Bb.wav"></audio>
-  <audio id="B" class="audio" src="./assets/notes/B.wav"></audio>
-  <audio id="C2" class="audio" src="./assets/notes/C2.wav"></audio>
+  <audio id="C" class="audio" src="./assets/lead/C.wav"></audio>
+  <audio id="Db" class="audio" src="./assets/lead/Db.wav"></audio>
+  <audio id="D" class="audio" src="./assets/lead/D.wav"></audio>
+  <audio id="Eb" class="audio" src="./assets/lead/Eb.wav"></audio>
+  <audio id="E" class="audio" src="./assets/lead/E.wav"></audio>
+  <audio id="F" class="audio" src="./assets/lead/F.wav"></audio>
+  <audio id="Gb" class="audio" src="./assets/lead/Gb.wav"></audio>
+  <audio id="G" class="audio" src="./assets/lead/G.wav"></audio>
+  <audio id="Ab" class="audio" src="./assets/lead/Ab.wav"></audio>
+  <audio id="A" class="audio" src="./assets/lead/A.wav"></audio>
+  <audio id="Bb" class="audio" src="./assets/lead/Bb.wav"></audio>
+  <audio id="B" class="audio" src="./assets/lead/B.wav"></audio>
+  <audio id="C2" class="audio" src="./assets/lead/C2.wav"></audio>
 
   <noscript>Your browser must support JavaScript to play JavaSynth!</noscript>
 </body>

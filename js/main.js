@@ -1,10 +1,10 @@
-import { pianoSounds, synthSounds } from './sounds.js';
+import { lead, bass, pad, chaos } from './sounds.js';
 import { keys, whiteKeys, blackKeys, whiteKeyboard, blackKeyboard, dropdown, button } from './elements.js';
 import playNote from './playnote.js';
 import changeSound from './changesound.js';
 
 keys.forEach(key => key.addEventListener('click', () => playNote(key)));
-dropdown.addEventListener('change', e => changeSound(pianoSounds, synthSounds, e.target.value));
+dropdown.addEventListener('change', e => changeSound(lead, bass, pad, chaos, e.target.value));
 button.addEventListener('click', e => showKeys(e));
 document.addEventListener('keydown', e => {
   if (e.repeat) return;
