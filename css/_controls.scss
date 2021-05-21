@@ -10,6 +10,7 @@ label {
 }
 
 select {
+  -webkit-appearance: initial;
   padding: 1rem 12rem 1rem 3rem;
   border: 0.2rem solid $pink;
   border-radius: 0.5rem;

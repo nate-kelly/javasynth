@@ -656,6 +656,7 @@ label {
 }
 
 select {
+  -webkit-appearance: initial;
   padding: 1rem 12rem 1rem 3rem;
   border: 0.2rem solid #ff1493;
   border-radius: 0.5rem;
@@ -805,7 +806,7 @@ body {
   color: #eee;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  font-size: calc(1.2rem + 1vw);
+  font-size: 2rem;
   text-align: center;
 }
 

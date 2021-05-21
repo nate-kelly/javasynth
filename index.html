@@ -11,17 +11,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="./js/main.js" type="module"></script>
 </head>
 
 <body>
   <header>
     <div class="wrapper">
-      <h1 data-text="JavaSynth">JavaSynth</h1>
+      <h1 data-text="JavaSynth" class="animate__animated animate__fadeInDownBig">JavaSynth</h1>
     </div>
   </header>
 
-  <main>
+  <main class="animate__animated animate__zoomIn">
     <section>
       <div class="wrapper">
         <form action="#">
@@ -81,11 +82,13 @@
           <p class="letter">K</p>
         </button>
       </div>
-      <button class="overlay">Show Keyboard Overlay</button>
+      <div class="wrapper">
+        <button class="overlay">Show Keyboard Overlay</button>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="animate__animated animate__fadeInUpBig">
     <div class="wrapper">
       <p>Created by <a href="https://natemakes.dev" target="_blank" rel="noreferrer">Nathan Kelly</a></p>
     </div>
