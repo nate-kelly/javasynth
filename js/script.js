@@ -6,38 +6,72 @@ const blackKeyboard = ['w', 'e', 't', 'y', 'u'];
 const dropdown = document.getElementById('sounds');
 const button = document.querySelector('.overlay');
 
-const pianoSounds = [
-  { note: 'C', path: './assets/piano-notes/C.mp3' },
-  { note: 'Db', path: './assets/piano-notes/Db.mp3' },
-  { note: 'D', path: './assets/piano-notes/D.mp3' },
-  { note: 'Eb', path: './assets/piano-notes/Eb.mp3' },
-  { note: 'E', path: './assets/piano-notes/E.mp3' },
-  { note: 'F', path: './assets/piano-notes/F.mp3' },
-  { note: 'Gb', path: './assets/piano-notes/Gb.mp3' },
-  { note: 'G', path: './assets/piano-notes/G.mp3' },
-  { note: 'Ab', path: './assets/piano-notes/Ab.mp3' },
-  { note: 'A', path: './assets/piano-notes/A.mp3' },
-  { note: 'Bb', path: './assets/piano-notes/Bb.mp3' },
-  { note: 'B', path: './assets/piano-notes/B.mp3' }
+const lead = [
+  { note: 'C', path: './assets/lead/C.wav' },
+  { note: 'Db', path: './assets/lead/Db.wav' },
+  { note: 'D', path: './assets/lead/D.wav' },
+  { note: 'Eb', path: './assets/lead/Eb.wav' },
+  { note: 'E', path: './assets/lead/E.wav' },
+  { note: 'F', path: './assets/lead/F.wav' },
+  { note: 'Gb', path: './assets/lead/Gb.wav' },
+  { note: 'G', path: './assets/lead/G.wav' },
+  { note: 'Ab', path: './assets/lead/Ab.wav' },
+  { note: 'A', path: './assets/lead/A.wav' },
+  { note: 'Bb', path: './assets/lead/Bb.wav' },
+  { note: 'B', path: './assets/lead/B.wav' },
+  { note: 'C2', path: './assets/lead/C2.wav' }
 ];
 
-const synthSounds = [
-  { note: 'C', path: './assets/notes/C.wav' },
-  { note: 'Db', path: './assets/notes/Db.wav' },
-  { note: 'D', path: './assets/notes/D.wav' },
-  { note: 'Eb', path: './assets/notes/Eb.wav' },
-  { note: 'E', path: './assets/notes/E.wav' },
-  { note: 'F', path: './assets/notes/F.wav' },
-  { note: 'Gb', path: './assets/notes/Gb.wav' },
-  { note: 'G', path: './assets/notes/G.wav' },
-  { note: 'Ab', path: './assets/notes/Ab.wav' },
-  { note: 'A', path: './assets/notes/A.wav' },
-  { note: 'Bb', path: './assets/notes/Bb.wav' },
-  { note: 'B', path: './assets/notes/B.wav' }
+const bass = [
+  { note: 'C', path: './assets/bass/C.wav' },
+  { note: 'Db', path: './assets/bass/Db.wav' },
+  { note: 'D', path: './assets/bass/D.wav' },
+  { note: 'Eb', path: './assets/bass/Eb.wav' },
+  { note: 'E', path: './assets/bass/E.wav' },
+  { note: 'F', path: './assets/bass/F.wav' },
+  { note: 'Gb', path: './assets/bass/Gb.wav' },
+  { note: 'G', path: './assets/bass/G.wav' },
+  { note: 'Ab', path: './assets/bass/Ab.wav' },
+  { note: 'A', path: './assets/bass/A.wav' },
+  { note: 'Bb', path: './assets/bass/Bb.wav' },
+  { note: 'B', path: './assets/bass/B.wav' },
+  { note: 'C2', path: './assets/bass/C2.wav' }
+];
+
+const pad = [
+  { note: 'C', path: './assets/pad/C.wav' },
+  { note: 'Db', path: './assets/pad/Db.wav' },
+  { note: 'D', path: './assets/pad/D.wav' },
+  { note: 'Eb', path: './assets/pad/Eb.wav' },
+  { note: 'E', path: './assets/pad/E.wav' },
+  { note: 'F', path: './assets/pad/F.wav' },
+  { note: 'Gb', path: './assets/pad/Gb.wav' },
+  { note: 'G', path: './assets/pad/G.wav' },
+  { note: 'Ab', path: './assets/pad/Ab.wav' },
+  { note: 'A', path: './assets/pad/A.wav' },
+  { note: 'Bb', path: './assets/pad/Bb.wav' },
+  { note: 'B', path: './assets/pad/B.wav' },
+  { note: 'C2', path: './assets/pad/C2.wav' }
+];
+
+const chaos = [
+  { note: 'C', path: './assets/chaos/C.wav' },
+  { note: 'Db', path: './assets/chaos/C.wav' },
+  { note: 'D', path: './assets/chaos/C.wav' },
+  { note: 'Eb', path: './assets/chaos/C.wav' },
+  { note: 'E', path: './assets/chaos/C.wav' },
+  { note: 'F', path: './assets/chaos/C.wav' },
+  { note: 'Gb', path: './assets/chaos/C.wav' },
+  { note: 'G', path: './assets/chaos/C.wav' },
+  { note: 'Ab', path: './assets/chaos/C.wav' },
+  { note: 'A', path: './assets/chaos/C.wav' },
+  { note: 'Bb', path: './assets/chaos/C.wav' },
+  { note: 'B', path: './assets/chaos/C.wav' },
+  { note: 'C2', path: './assets/chaos/C.wav' }
 ];
 
 keys.forEach(key => key.addEventListener('click', () => playNote(key)));
-dropdown.addEventListener('change', e => changeSound(pianoSounds, synthSounds, e.target.value));
+dropdown.addEventListener('change', e => changeSound(lead, bass, pad, chaos, e.target.value));
 button.addEventListener('click', e => showKeys(e));
 document.addEventListener('keydown', e => {
   if (e.repeat) return;
@@ -58,13 +92,21 @@ const playNote = key => {
   });
 };
 
-const changeSound = (pianoSounds, synthSounds, preset) => {
-  if (preset === 'Piano') {
-    pianoSounds.forEach(sound => {
+const changeSound = (lead, bass, pad, chaos, preset) => {
+  if (preset === 'lead') {
+    lead.forEach(sound => {
       document.getElementById(sound.note).setAttribute('src', sound.path);
     });
-  } else if (preset === 'Synth') {
-    synthSounds.forEach(sound => {
+  } else if (preset === 'bass') {
+    bass.forEach(sound => {
+      document.getElementById(sound.note).setAttribute('src', sound.path);
+    });
+  } else if (preset === 'pad') {
+    pad.forEach(sound => {
+      document.getElementById(sound.note).setAttribute('src', sound.path);
+    });
+  } else if (preset === 'chaos') {
+    chaos.forEach(sound => {
       document.getElementById(sound.note).setAttribute('src', sound.path);
     });
   }
